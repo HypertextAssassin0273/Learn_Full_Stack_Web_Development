@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Practice</title>
+</head>
+<body>
+    <main>
+        <h1>User Info Form</h1>
+        <form>
+            <input id="name" type="text" placeholder="Username">
+            <br><br>
+            <input id="email" type="email" placeholder="Email">
+            <br><br>
+            <input id="phone" type="number" placeholder="Phone">
+            <br><br>
+            <input id="age" type="number" placeholder="Age">
+            <hr>
+
+            <span><b>Radio Buttons:</b></span>
+            <label>
+                <input value="indoor" type="radio" name="indoor-outdoor" checked>Indoor
+            </label>
+            <!-- notes:
+                    1) when 'input' is nested in 'label' tag,
+                       we don't need 'for' & 'id' attributes for association
+                    2) 'label' provides usability improvement for mouse users
+                        (i.e. clicking area increases for respective input field)
+            -->
+            <label>
+                <input value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+            </label>
+            <label>
+                <input value="open" type="radio" name="indoor-outdoor">Open
+            </label>
+            <label>
+                <input value="close" type="radio" name="indoor-outdoor">Close
+            </label>
+            <br><br>
+
+            <span><b>Checkboxes:</b></span>
+            <label>
+                <input value="indoor" type="checkbox" name="indoor-outdoor">Indoor
+            </label>
+            <label>
+                <input value="outdoor" type="checkbox" name="indoor-outdoor">Outdoor
+            </label>
+            <label>
+                <input value="open" type="checkbox" name="indoor-outdoor">Open
+            </label>
+            <label>
+                <input value="close" type="checkbox" name="indoor-outdoor">Close
+            </label>
+            <hr>
+
+            <input type="submit" value="Submit Info">
+        </form>
+    </main>
+</body>
+</html>
