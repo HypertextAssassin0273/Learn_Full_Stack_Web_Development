@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Practice 1 (HTML)</title>
+</head>
+<body>
+    <h1>Tea</h1> <!-- heading -->
+
+    <hr> <!-- horizontal line -->
+    
+    <p> <!-- paragraph -->
+        It is one of the most popular hot beverages in world and especially in India. 
+        A cup of milk tea (chai) in morning gives refreshing feel and put you on track of long hard day.
+    
+        <br> <!-- break (new line) -->
+        <br>
+
+        It can be prepared with milk or milk powder and various types of plain or flavored tea powders. 
+        This recipe prepares Indian tea using milk, sugar, tea powder and water.
+    </p>
+    
+    <h1>Ordered Lists</h1>
+    <!-- default (numbers) -->
+    <ol>
+        <li>Tea Masala Powder (Chai Masala)</li>
+        <li>Ginger Tea</li>
+        <li>Brown Tea</li>
+    </ol>
+    <!-- alphabets (small/captial) -->
+    <ol type="a">
+        <li>Tea Masala Powder (Chai Masala)</li>
+        <li>Ginger Tea</li>
+        <li>Brown Tea</li>
+    </ol>
+    <!-- roman (small/captial) -->
+    <ol type="i">
+        <li>Tea Masala Powder (Chai Masala)</li>
+        <li>Ginger Tea</li>
+        <li>Brown Tea</li>
+    </ol>
+
+    <h1>Unordered Lists</h1>
+    <!-- here "list-style: disc outside" is default) -->
+    <ul>
+        <li>Tea Masala Powder (Chai Masala)</li>
+        <li>Ginger Tea</li>
+        <li>Brown Tea</li>
+    </ul>
+    <!-- here "inside" is used for giving extra "tab spacing" in list -->
+    <ul style="list-style: disc inside;">
+        <li>Tea Masala Powder (Chai Masala)</li>
+        <li>Ginger Tea</li>
+        <li>Brown Tea</li>
+    </ul>
+    <!-- here "outside" is default (i.e. "list-style: square outside") -->
+    <ul style="list-style: square;">
+        <li>Tea Masala Powder (Chai Masala)</li>
+        <li>Ginger Tea</li>
+        <li>Brown Tea</li>
+    </ul>
+    <!-- for more info on list-style, visit:
+        https://www.w3schools.com/cssref/playdemo.asp?filename=playcss_list-style
+     -->
+
+    <h1>Nested Lists</h1>
+    <ul>
+        <li>Tea Masala Powder (Chai Masala)</li>
+        <li>Ginger Tea</li>
+        <ul>
+            <li> hot steaming ginger tea</li>
+            <li> mild ginger tea</li>
+        </ul>
+        <li>Brown Tea</li>
+        <ul style="list-style: circle inside;"> <!-- gives extra "tab spacing" -->
+            <li> strong brown tea (less milk)</li>
+            <li> mild brown tea (more milk)</li>
+        </ul>
+    </ul>
+
+    <h1>Embedding Images</h1>
+    <picture> <!-- here picture tag is optional to add -->
+        <img width="320" height="240" 
+             src="/session_practice_1/media/milk-tea-recipe.jpg" 
+             alt="tea"> <!-- shows text-string as alternate (if pic isn't found) -->
+        <br>
+        <caption>[fig1: brown tea]</caption>
+    </picture>
+    
+    <h1> Links </h1>
+    <!-- normal/self-page link -->
+    <a href="" target="_blank">click me</a> <!-- here target opens page in new tab -->
+    <br><br>
+
+    <!-- mail link -->
+    <a href="mailto:shazaibahmed0000@gmail.com">my email</a>
+    <br><br>
+
+    <!-- image as link -->
+    <a href="//en.wikipedia.org/wiki/Smiley" target="_blank">
+        <!-- note: https://blabla/blue... = //blabla/blue... -->
+
+        <img src="//i.pinimg.com/originals/c8/c4/58/c8c458b420f6fb7aba81ef02e64a0182.gif" 
+             alt="smiley gif"
+             style="width:42px; height:42px;">
+    </a>
+    
+    <h1>Divisions (containers)</h1>
+    <!-- allows us to set different properties for diff. elements -->
+    
+    <header>
+        <h2 style="color: red;">Header</h2>
+        <p>I am header (top most division)</p>
+    </header>
+
+    <main>
+        <h2 style="color: blue;">Header</h2>
+        <p>I am main (middle division)</p>
+
+        <div style="text-align: center;">
+            <h2 style="color: orchid;">Div 1</h2>
+            <p>I am div 1 of main division</p>
+        </div>
+    </main>
+
+    <footer>
+        <h2 style="color: green;">Header</h2>
+        <p>I am footer (bottom most division)</p>
+    </footer>
+    
+    <h1>Some Useful tags</h1>
+    <p>
+        <b>'cite' tag:</b>
+        <br>
+        <cite>jungle book</cite> is written by <cite>tom</cite>
+    </p>
+
+    <p>
+        <b>'del (delete)' & 'ins (insert)' tag:</b>
+        <br> 
+        my name is shahzaib <del>ahmed</del> <ins>khan</ins>.
+        And, I am learning html.
+    </p>
+
+    <b>'code' tag: </b>
+    <br>
+    <code>
+        int main(){
+            std::cout<<"hi";
+            return 0;
+        }
+    </code>
+
+    <p>
+        <b>'kbd (keyboard)' tag:</b>
+        <br>
+        Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).
+        
+        <style>
+            #d1 kbd{ /* comment: applies on all 'kbd' tags of 'd1' division */
+                border-radius: 2px;
+                padding: 2px;
+                border: 1px solid black;
+            }
+        </style>
+        <div id="d1">
+            Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).
+        </div>      
+    </p>
+
+    <h1>Buttons</h1>
+    <button>click here</button>
+    <br><br>
+
+    <label for="fruits">choose a fruit:</label>
+    <select name="fruits" id="fruits">
+        <option value="apple">Apple</option>
+        <option value="mango">Mango</option>
+        <option value="orange">Orange</option>
+    </select>
+
+    <h1>Forms</h1>
+    <form action="" method="get">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="type something...">
+        <input type="submit" value="submit">
+    </form>
+
+    <h1>Embedding Audios</h1>
+    <audio preload="none" controlslist="nodownload"
+           src="//englishsongs.wapkiz.com/filedownload/2204258/MAX-Ali-Gatie-Butterflies-(englishsongs.wapkiz.com).mp3" 
+           controls>
+        
+        Your browser does not support the audio element.
+        <!-- if no 'source' works then browser displays the string-text (if provided) inside audio tag -->
+    </audio>
+
+    <h1>Embedding Videos</h1>
+    <video width="320" height="240"
+           preload="none" controlslist="nodownload"
+           src="//samplelib.com/lib/preview/mp4/sample-5s.mp4"
+           poster="//samplelib.com/lib/preview/mp4/sample-5s.jpg"
+           disablepictureinpicture
+           controls>
+        
+        Your browser does not support the video tag.
+        <!-- if no 'source' works then browser displays the string-text (if provided) inside video tag -->
+    </video>
+    <br>
+    
+    <!-- with captions/subtitles -->
+    <video width="320" height="240"
+           preload="none" controlslist="nodownload"
+           src="/session_practice_1/media/ElephantsDream.mp4"
+           poster="/session_practice_1/media/ED-preview.jpg"
+           controls>
+        
+        <track kind="captions" srclang="en" label="English"
+               src="/session_practice_1/media/ED-subtitles-en.vtt"
+               default>
+
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
